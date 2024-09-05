@@ -6,11 +6,8 @@ class Config:
     APP_ID = int(os.environ.get("APP_ID",21254911))
     API_HASH = os.environ.get("API_HASH","95e927b3c48ac0af4ebb1c3ffeb0069b")
     BOT_TOKEN = os.environ.get("BOT_TOKEN","7461358634:AAHqk9o56O33T6uy8h4rWFFs_GmNwlhzZXc")
-    LOGS_CHANNEL = (
-        int(os.environ.get("LOGS_CHANNEL",-1002243837012))
-        if os.environ.get("LOGS_CHANNEL").strip("-").isdigit()
-        else os.environ.get("LOGS_CHANNEL")
-    )
+    LOGS_CHANNEL = int(os.environ.get("LOGS_CHANNEL",-1002243837012))
+        
     MONGODB_URL = os.environ.get("MONGODB_URL","mongodb+srv://JXXS7:JXXS7@cluster0.xxkw0.mongodb.net/?retryWrites=true&w=majority")
     MONGODB_DBNAME = os.environ.get("MONGODB_DBNAME", "Unzipper_Bot")
     BOT_OWNER = int(os.environ.get("BOT_OWNER",6169288210))
