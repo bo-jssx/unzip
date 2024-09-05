@@ -3,17 +3,17 @@ import os
 
 
 class Config:
-    APP_ID = int(os.environ.get("APP_ID"))
-    API_HASH = os.environ.get("API_HASH")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")
+    APP_ID = int(os.environ.get("APP_ID",21254911))
+    API_HASH = os.environ.get("API_HASH","95e927b3c48ac0af4ebb1c3ffeb0069b")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN","7461358634:AAHqk9o56O33T6uy8h4rWFFs_GmNwlhzZXc")
     LOGS_CHANNEL = (
-        int(os.environ.get("LOGS_CHANNEL"))
+        int(os.environ.get("LOGS_CHANNEL",-1002243837012))
         if os.environ.get("LOGS_CHANNEL").strip("-").isdigit()
         else os.environ.get("LOGS_CHANNEL")
     )
-    MONGODB_URL = os.environ.get("MONGODB_URL")
+    MONGODB_URL = os.environ.get("MONGODB_URL","mongodb+srv://JXXS7:JXXS7@cluster0.xxkw0.mongodb.net/?retryWrites=true&w=majority")
     MONGODB_DBNAME = os.environ.get("MONGODB_DBNAME", "Unzipper_Bot")
-    BOT_OWNER = int(os.environ.get("BOT_OWNER"))
+    BOT_OWNER = int(os.environ.get("BOT_OWNER",6169288210))
     DOWNLOAD_LOCATION = f"{os.path.dirname(__file__)}/Downloaded"
     THUMB_LOCATION = f"{os.path.dirname(__file__)}/Thumbnails"
     TG_MAX_SIZE = 2097152000
